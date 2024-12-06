@@ -1,5 +1,6 @@
 ###  Project: 
-  * Configure Dynamic Inventory 
+ 
+  * Automate Docker Compose deployments with Ansible and AWS dynamic inventory. 
 ### Technologiesused: 
   * Ansible, Terraform, AWS
 
