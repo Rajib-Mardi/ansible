@@ -8,7 +8,7 @@
 ### Project Description:
   *  Create three  EC2 Instance with Terraform and assign public DNS to to EC2 Instance.
 
-### Written Ansible Playbook that installs necessary technologies like Docker and Docker Compose, copies docker-compose file to the server and starts the Docker containers configured inside the docker- compose file
+#### Written Ansible Playbook that installs necessary technologies like Docker and Docker Compose, copies docker-compose file to the server and starts the Docker containers configured inside the docker- compose file
 
 1. Install Pip3, Docker, and Docker-Compose
 
