@@ -5,35 +5,7 @@
 
 
 ### Project Description:
-  *  Create EC2 Instance with Terraform
-  
-* Ansible AWS EC2 Plugin to dynamically sets inventory of EC2 servers that Ansible should manage, instead of hard-coding server addresses in Ansible inventory file
-
-  ### plugin configuration for aws_ec2
-
-  1. ```Plugin```: Specifies that the plugin to be used is the ```aws_ec2``` plugin. This plugin interacts with the AWS API to discover EC2 instances.
-  2. Enable plugins in ansible.cfg for  aws_ec2 as ```Enable_plugins= aws_ec2``` 
-
-2. ```Regions```: Lists the AWS regions where the dynamic inventory should look for EC2 instances.  it specifies "eu-central-1". 
-
-3. ```Keyed Groups```: This section configures groups that are created based on specific attributes of EC2 instances. The purpose of these groups is to organize instances in the inventory.
-
-   * ```Tags```: Instances are grouped based on their tags. A group is created for each unique tag key with the prefix "tag."
-
-   * ```Instance Type```: Instances are grouped based on their instance type. A group is created for each unique instance type with the prefix "instance_type."
-
-### Adjusted the Ansible playbook[docker-compose-user link] and ansible.cfg to use dynamic hosts from AWS.
-
-### Execute the ansible-playbook
-
-<img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/1e027a04-bdb3-4d13-85dd-1fc77ae5bf2d" width="700">
-<img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/f8f5cd03-22e3-4dd5-b4a3-991a0092dbc1" width="700">
-<img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/35d8cb4a-d792-4779-a19b-6e23086827e6" width="700">
-
-
-<img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/029d0f7d-c094-4117-8a34-6a542456920c" width="700">
-
---------------------------------------
+  *  Create three  EC2 Instance with Terraform and assign public DNS to to EC2 Instance.
 
 ### Written Ansible Playbook that installs necessary technologies like Docker and Docker Compose, copies docker-compose file to the server and starts the Docker containers configured inside the docker- compose file
 
@@ -89,6 +61,32 @@
 
      * Uses the ```docker_compose``` module to start a Docker container using the Docker Compose file.
      * The ```project_src``` parameter specifies the location of the Docker Compose file.
+  
+* Ansible AWS EC2 Plugin to dynamically sets inventory of EC2 servers that Ansible should manage, instead of hard-coding server addresses in Ansible inventory file
 
+  ### plugin configuration for aws_ec2
+
+  1. ```Plugin```: Specifies that the plugin to be used is the ```aws_ec2``` plugin. This plugin interacts with the AWS API to discover EC2 instances.
+  2. Enable plugins in ansible.cfg for  aws_ec2 as ```Enable_plugins= aws_ec2``` 
+
+2. ```Regions```: Lists the AWS regions where the dynamic inventory should look for EC2 instances.  it specifies "eu-central-1". 
+
+3. ```Keyed Groups```: This section configures groups that are created based on specific attributes of EC2 instances. The purpose of these groups is to organize instances in the inventory.
+
+   * ```Tags```: Instances are grouped based on their tags. A group is created for each unique tag key with the prefix "tag."
+
+   * ```Instance Type```: Instances are grouped based on their instance type. A group is created for each unique instance type with the prefix "instance_type."
+
+
+
+### Execute the ansible-playbook
+
+<img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/1e027a04-bdb3-4d13-85dd-1fc77ae5bf2d" width="700">
+<img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/f8f5cd03-22e3-4dd5-b4a3-991a0092dbc1" width="700">
+<img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/35d8cb4a-d792-4779-a19b-6e23086827e6" width="700">
+
+
+<img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/029d0f7d-c094-4117-8a34-6a542456920c" width="700">
 
 <img src="https://github.com/Rajib-Mardi/ansible-projects/assets/96679708/9e6fe2ac-0a3f-4eb7-8063-46b70ca2fc26" width="800">
+
